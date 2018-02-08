@@ -19,7 +19,7 @@
 			</div>
 			<div class="col-sm-12">
 				<div class="card">
-					<div class="card-header">Hasil Pencarian untuk : </div>
+					<div class="card-header">Hasil Pencarian untuk : "<span class="show_kata_kunci"></span>"</div>
 					<div class="card-body">
 						<table class="table table-hover">
 							<thead>
@@ -27,7 +27,9 @@
 									<th>#</th>
 									<th>IP ADDRESS</th>
 									<th>CAMERA NAME</th>
-									<th>NVR NUMBER</th>
+									<th>NVR</th>
+									<th>CHANNEL</th>
+									<th>IMAGE</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -58,9 +60,10 @@
 					kata_kunci : $('.kata_kunci').val()
 				},
 				success: function(response) {
-					console.log(response)
+					for
 				}
-			})
+			});
+			$('.show_kata_kunci').html($('.kata_kunci').val()) 
 		})
 	});
 </script>
