@@ -60,7 +60,9 @@
 					kata_kunci : $('.kata_kunci').val()
 				},
 				success: function(response) {
-					for
+					$.each(response, function(i) {
+						console.log(i)
+					})
 				}
 			});
 			$('.show_kata_kunci').html($('.kata_kunci').val()) 

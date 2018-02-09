@@ -8,7 +8,7 @@ if (isset($_POST['kata_kunci'])) {
 	if ($konek) {
 		$query = mysqli_query($konek, "SELECT * FROM cctv WHERE ip_address LIKE \"%$kata_kunci%\" OR nvr LIKE \"%$kata_kunci%\" OR camera_name LIKE \"%$kata_kunci%\"");
 		foreach ($query as $data) {
-			echo json_encode($data);
+			echo json_encode(array('data' => $data));
 		}
 	}else{
 		echo "connection_lost";
